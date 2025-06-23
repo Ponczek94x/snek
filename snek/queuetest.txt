@@ -1,0 +1,50 @@
+mov ecx, 100
+	call queue_push
+	mov ecx, 101
+	call queue_push
+	mov ecx, 102
+	call queue_push
+	
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	
+	mov ecx, 103
+	call queue_push
+	mov ecx, 104
+	call queue_push
+	mov ecx, 105
+	call queue_push
+	mov ecx, 106
+	call queue_push
+	mov ecx, 107
+	call queue_push
+	mov ecx, 108
+	call queue_push
+	mov ecx, 109
+	call queue_push
+	mov ecx, 110
+	call queue_push
+
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	call queue_pop
+	
+
+	mov eax, [queue_beg]
+	mov ebx, [fifo_queue + eax]
+	mov [tout], ebx
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, tout
+	mov edx, 1
+	int 0x80 
+
+	mov eax, 1
+    xor ebx, ebx
+    int 0x80

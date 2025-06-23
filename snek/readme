@@ -1,0 +1,6 @@
+here is the newest snake version
+
+compile:
+
+nasm -f elf32 snek.asm -o snek.o
+ld -m elf_i386 snek.o -o snek
