@@ -1,6 +1,5 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,7 @@
     <script src="libv86.js"></script>
     <script>
     "use strict";
-    window.onload = function()
-    {
+    window.onload = function() {
         var emulator = new V86({
             wasm_path: "v86.wasm",
             memory_size: 512 * 1024 * 1024,
@@ -22,17 +20,16 @@
             bios: { url: "bios/seabios.bin" },
             vga_bios: { url: "bios/vgabios.bin" },
             cdrom: { url: "core/TC-remastered.iso" },
-            autostart: true,
-            
-            
+            autostart: true
         });
     };
     </script>
+
     <div id="screen_container">
         <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
         <canvas style="display: none"></canvas>
     </div>
-    <div>To run snake, wait until the terminal loads (this may take a few seconds), then press enter, type ./snek and press enter again</div>
+
+    <div>To run snake, wait until the terminal loads (this may take a few seconds), then press enter, type <code>./snek</code> and press enter again.</div>
 </body>
 </html>
-
